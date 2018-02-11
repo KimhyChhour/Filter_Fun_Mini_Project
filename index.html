@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Mini Project</title>
+
+
+
+      <link rel="stylesheet" href="css/style.css">
+
+
+</head>
+
+<body>
+  <script src="http://www.dukelearntoprogram.com/course1/common/js/image/SimpleImage.js">
+</script>
+<script
+src="http://www.dukelearntoprogram.com/course1/common/js/image/SimplePixel.js"></script>
+
+<h1>Filter Fun</h1>
+
+<canvas id="imgcanv">
+</canvas>
+
+<h3>Load Image</h3>
+
+<p>
+<input type="file" multiple="false"
+accept="image/*" id="imgfile" onchange="loadImage()">
+</p>
+
+<h2>Choose Filter</h2>
+
+<p>
+<input type="button" value="  Grayscale" onclick="doGray()">
+
+<input type="button" value="Red" onclick="doRed()">
+
+<input type="button" id="blurButton" value="Blur"
+onclick="blurImage()">
+
+<input type="button" id="rainbowImage" value="Rainbow"
+onclick="rainbowImage()">
+
+<input type="button" id="mirrorButton" value="Mirror"
+onclick="mirrorImage()">
+
+<input type="button" id="negativeButton" value="Reflection"
+onclick="reflectButton()">
+
+<input type="button" id="reverseButton" value="Negative"
+onclick="negativeImage()">
+  
+<br><br>
+  Reflection Position
+<br/>
+<input type="range"
+         id="reflectSlider"
+         min="10"
+         max="90"
+         value="50"
+         oninput="reflectionSlider()">
+
+</p>
+<div>
+  <h2>Clear Filters</h2>
+</div>
+
+<div>
+<input type = "button" value = "Reset Image" onclick = "doReset()">
+
+<input type="button"
+         id="clearAll"
+         value="Clear All"
+         onclick="clearAll()">
+</div>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>
